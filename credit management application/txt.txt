@@ -1,0 +1,21 @@
+for current date
+const currentDate = new Date();
+const day = currentDate.getDate();
+const month = currentDate.getMonth() + 1; // Month is zero-based
+const year = currentDate.getFullYear();
+
+const formattedDate = `${day}/${month}/${year}`;
+
+
+
+
+var key= new Array();
+        for(i=0;i<=flag;i++){
+            if(username==result[i].username && password==result[i].password){
+                res.render("access")
+            }
+            key[i]=1;
+        }
+    if(key[flag]==1){
+        res.render("login",key[flag]);
+    }

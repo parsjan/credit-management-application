@@ -1,0 +1,29 @@
+<%- include('./partials/header.ejs') %>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 mt-5">
+           <h2 class="alert alert-success text-center"> Login </h2>
+             <form method="post" action="/access">
+                <div class="mb-3">
+                    <label for="username" class="form-label">User Name</label>
+                    <input type="text" class="form-control" id="username" name="username" />
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" />
+
+                    <input type="radio" name="gender" value="male" id=""> male
+                    <input type="radio" name="gender" value="female" id=""> female
+                </div>
+                  <button  type="submit" class="btn btn-primary"  > Login</button>
+             </form>
+             <% 
+                let paras = "hidden";
+                if(typeof erro !=='undefined' && erro === 0){ paras = "" }%>
+                
+                    <div class="text-danger" <%=paras%>>  Username or password is wrong. Please try again. </div>
+                <%  %>
+            </div>
+        </div>
+    </div>    
+    
