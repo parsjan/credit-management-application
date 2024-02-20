@@ -1,0 +1,6 @@
+{
+    "version": 2,
+    "name": "credit-management-application",
+    "builds": [{ "src": "app.js", "use": "@vercel/node" }],
+    "routes": [{ "src": "/(.*)", "dest": "/router/web.js" }]
+  }
